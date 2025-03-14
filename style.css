@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;   
+}
+nav{
+    background-color: black;
+}
+main{
+    background-image: url(images/pexels-hasan-kurt-154798938-10749578.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+}
+.quoat{
+    text-align: center;
+    
+}
+.quoat {
+    position: relative;
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+
+.quoat_1, .quoat_2 {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+
+.text {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1s ease-in-out forwards 1.5s;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.quoat_1 { animation-delay: 0.5s; }
+.quoat_2 { animation-delay: 1s; }
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    height: 80vh; 
+}
+.carousel-inner img {
+    height: 80vh; 
+    object-fit: cover; 
+}
+
+.specialties-title{
+    padding-bottom: 50px;
+}
+
+.specialties-section {
+    text-align: center;
+    padding: 20px 0;
+}
+.specialties-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.specialties-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.specialties-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+.specialties-card-body {
+    padding: 20px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+}
+.specialties-card h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #343a40;
+}
+.specialties-card p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.reviews-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.reviews-title{
+    padding-bottom: 50px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.review-stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+.review-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 10px;
+}
+.review-author {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #343a40;
+}
+
+.review-section {
+    text-align: center;
+    padding: 60px 0;
+}
+.review-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+.review-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.star-rating {
+    font-size: 1.5rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    margin: 0 5px;
+}
+.star-rating label:hover,
+.star-rating input:checked ~ label {
+    color: #FFA500;
+}
+.submit-btn {
+    background: #d9534f;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    transition: 0.3s;
+}
+.submit-btn:hover {
+    background: #c9302c;
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 50px 0;
+}
+.footer h5 {
+    font-weight: bold;
+    color: #d9534f;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    color: #d9534f;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #d9534f;
+}
+.footer-bottom {
+    background: #222;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}

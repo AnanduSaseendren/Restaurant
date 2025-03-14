@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alex+Brush&family=Emblema+One&family=Grape+Nuts&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;   
+}
+nav{
+    background-color: black;
+}
+
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .about-section {
+            background: url('https://source.unsplash.com/1600x900/?restaurant,dining') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .about-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .chefs-section {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .chef-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .chef-card:hover {
+            transform: scale(1.05);
+        }
+
+        .chef-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .chef-card h5 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+</style>
+<body>
+    
+    <nav class="navbar navbar-expand-lg sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/Restaurant-Logo-Design-Template-2048x1152-removebg-preview.png" alt="" class="logo me-2" style="height: 50px;">
+                <h1 class="mb-0 fs-3" style="color: white;">Restaurant</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>  
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto me-5" >
+                    <li class="nav-item" >
+                        <a class="nav-link " aria-current="page" href="index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="about.html" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="Locations.html" style="color: white;">Location</a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link " href="Cuisines.html" style="color: white;">Cuisine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Login.html" style="color: white;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Reservation.html" style="color: white;">Reservation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <h1>Welcome to Our Restaurant</h1>
+        <p class="about-text">
+            At <strong>Restaurant</strong>, we bring you an unforgettable dining experience with the finest ingredients, 
+            expert chefs, and warm hospitality. Join us to indulge in flavors that tell a story.
+        </p>
+    </section>
+    
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-leaf feature-icon"></i>
+                    <h4>Fresh Ingredients</h4>
+                    <p>We use locally sourced, fresh ingredients to craft every dish with perfection.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-utensils feature-icon"></i>
+                    <h4>Authentic Recipes</h4>
+                    <p>Traditional recipes passed down through generations, cooked with love.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-star feature-icon"></i>
+                    <h4>Exceptional Service</h4>
+                    <p>Our dedicated team ensures every guest enjoys a welcoming experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="chefs-section">
+        <div class="container">
+            <h2 class="text-center mb-5">👨‍🍳 Meet Our Chefs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="images/female-chef-restaurant-hotel-kitchen-529518.jpg" alt="Chef">
+                        <h5>Dominique Crenn</h5>
+                        <p>Head Chef with 20+ years of experience in fine dining.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="images/depositphotos_30861025-stock-photo-chef-cooking-in-his-kitchen.png" alt="Chef">
+                        <h5>Gordon Ramsay</h5>
+                        <p>Master pastry chef specializing in gourmet desserts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="chef-card">
+                        <img src="images/39-390201_chef-images-hd.jpg" alt="Chef">
+                        <h5>Massimo Bottura</h5>
+                        <p>Expert in fusion cuisine, blending flavors from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container text-center my-5">
+        <h3>🍷 Experience the Best Dining in Town</h3>
+        <p>Visit us today or make a reservation to enjoy an unforgettable culinary journey.</p>
+        <a href="#" class="btn btn-danger btn-lg">Book a Table</a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Welcome to our restaurant! We serve delicious, high-quality food made with fresh ingredients. Join us for an unforgettable dining experience.</p>
+                </div>
+    
+                
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="Locations.html">📍 Locations</a></li>
+                        <li><a href="#">📖 Cuisine</a></li>
+                        <li><a href="Login.html">👨‍🍳 Login</a></li>
+                        <li><a href="about.html">📞 About</a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+    
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Restaurant Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alex+Brush&family=Emblema+One&family=Grape+Nuts&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    nav {
+        background-color: black;
+    }
+
+    .footer {
+        background: #343a40;
+        color: white;
+        padding: 50px 0;
+    }
+
+    .footer h5 {
+        font-weight: bold;
+        color: #d9534f;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer a:hover {
+        color: #d9534f;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        color: white;
+        transition: transform 0.3s ease-in-out, color 0.3s;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+        color: #d9534f;
+    }
+
+    .footer-bottom {
+        background: #222;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+
+    body {
+        background: url('https://cdn.wallpapersafari.com/83/21/rNY3k2.jpg') center/cover no-repeat;
+        color: white;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../../images/Restaurant-Logo-Design-Template-2048x1152-removebg-preview.png" alt=""
+                    class="logo me-2" style="height: 50px;">
+                <h1 class="mb-0 fs-3" style="color: white;">Restaurant</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="about.html" style="color: white;">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="Locations.html"
+                            style="color: white;">Locations</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#" style="color: white;">Cuisine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Login.html" style="color: white;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Reservation.html" style="color: white;">Reservation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1 class="mb-4">Select Your Country</h1>
+
+        <input type="text" id="search-input" class="form-control search-bar mb-4" placeholder="Search for a country...">
+
+        <div class="row" id="country-container">
+
+        </div>
+    </div>
+
+    <script>
+        const countries = [
+            { name: "India", flag: "https://flagcdn.com/w320/in.png", link: "india.html" },
+            { name: "United States", flag: "https://flagcdn.com/w320/us.png", link: "us.html" },
+            { name: "United Kingdom", flag: "https://flagcdn.com/w320/gb.png", link: "uk.html" },
+            { name: "France", flag: "https://flagcdn.com/w320/fr.png", link: "France.html" },
+            { name: "Germany", flag: "https://flagcdn.com/w320/de.png", link: "Germany.html" },
+            { name: "Italy", flag: "https://flagcdn.com/w320/it.png", link: "Italy.html" },
+            { name: "Spain", flag: "https://flagcdn.com/w320/es.png", link: "Spain.html" },
+            { name: "Canada", flag: "https://flagcdn.com/w320/ca.png", link: "Canada.html" },
+            { name: "Australia", flag: "https://flagcdn.com/w320/au.png", link: "Australia.html" },
+            { name: "Japan", flag: "https://flagcdn.com/w320/jp.png", link: "Japan.html" }
+        ];
+
+        function displayCountries(filter = "") {
+            const container = document.getElementById("country-container");
+            container.innerHTML = "";
+
+            countries
+                .filter(country => country.name.toLowerCase().includes(filter.toLowerCase()))
+                .forEach(country => {
+                    container.innerHTML += `
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                            <div class="card text-dark">
+                                <img src="${country.flag}" class="card-img-top" alt="${country.name}">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">${country.name}</h5>
+                                    <a href="${country.link}" class="btn btn-primary" target="_blank">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+        }
+
+        document.getElementById("search-input").addEventListener("keyup", function () {
+            displayCountries(this.value);
+        });
+
+        displayCountries();
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Welcome to our restaurant! We serve delicious, high-quality food made with fresh ingredients.
+                        Join us for an unforgettable dining experience.</p>
+                </div>
+
+
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="Locations.html">📍 Locations</a></li>
+                        <li><a href="Cuisines/Cuisines.html">📖 Cuisine</a></li>
+                        <li><a href="Login.html">👨‍🍳 Login</a></li>
+                        <li><a href="about.html">📞 About</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Restaurant Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
